@@ -1,681 +1,94 @@
 <!DOCTYPE html>
-<html lang="fr">
-  	<head>
-		<meta charset="utf-8">
-		<title>Gloria Cao</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Restaurant 100% végétalien! La crème du café, de la lumière à n’en plus finir et le Fleuve comme voisin de table. Bienvenue au Frida.">
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Gloria Cao</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="UI/UX and animation specialist excelling in impactful design. Eager to embrace new skills for enhanced user experiences."
+    />
+    <meta property="og:title" content="Gloria Cao Portfolio" />
+    <meta property="og:url" content="http://gloriacao.com" />
+    <meta property="og:image" content="https://imgur.com/a/UDiNgyG" />
+    <meta property="og:site_name" content="Gloria Cao Portfolio" />
+    <meta
+      property="og:description"
+      content="UI/UX and animation specialist excelling in impactful design. Eager to embrace new skills for enhanced user experiences."
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
+    <meta name="theme-color" content="#F8F5F5" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="/css/portfolio.css" />
+  </head>
 
+  <body class="preload">
+    <div class="loading">
+      <div id="coffeeWrapper">
+        <span class="left"></span>
+        <span class="middle"></span>
+        <span class="right"></span>
+        <img src="/assets/coffee-loading.svg" alt="Loading" id="coffee" />
+      </div>
+    </div>
+    <div class="flowers-topleft"></div>
+    <div class="flowers-topright"></div>
+    <div class="flowers-bottomright"></div>
+    <div class="flowers-bottomleft"></div>
 
-		<!-- OG, fav and touch icons -->
-		<meta property="og:title" content="Café Frida"/>
-		<meta property="og:url" content="http://cafefrida.ca/"/>
-		<meta property="og:image" content="http://cafefrida.ca/img/og-image.png"/>
-		<meta property="og:site_name" content="Café Frida"/>
-		<meta property="og:description" content="La crème du café, de la lumière à n’en plus finir et le Fleuve comme voisin de table. Bienvenue au Frida."/>
+    <header>
+      <img src="/assets/avatar.png" alt="gloria" class="logo" />
+    </header>
 
-		<link rel="apple-touch-icon-precomposed" href="/img/ic-57.png">
-		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/ic-72.png">
-		<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/img/ic-76.png">
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/ic-114.png">
-		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/ic-120.png">
-		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/ic-144.png">
-		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/ic-152.png">
-		<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/img/ic-180.png">
-		<link rel="icon" sizes="192x192" href="/img/ic-192.png">
+    <section id="about">
+      <h2>Hi!</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-xs-8 mobile-fullwidth">
+            <h1>
+              My name is <br />Gloria Cao
+              <span>and here are some "about me"s..</span>
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="col-right hidden-xs hidden-sm">
+        <div class="bg-gif"></div>
+      </div>
+    </section>
 
-		<meta name="theme-color" content="#395442">
-
-		<link rel="shortcut icon" href="/favicon.ico">
-		<link rel="stylesheet" type="text/css" href="css/portfolio.css">
-
-		<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,300,300italic,400italic,800,800italic,700,700italic' rel='stylesheet' type='text/css'>
-		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-		<!--[if lt IE 9]>
-		  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		  <script src="/js/jquery-ie.js"></script>
-		  <script src="/js/fix-ie.js"></script>
-		<![endif]-->
-
-	</head>
-
-	<body class="preload">
-		<div class="loading">
-			<div id="coffeeWrapper">
-				<span class="left"></span>
-				<span class="middle"></span>
-				<span class="right"></span>
-				<img src="/img/coffee-loading.svg" alt="Loading" id="coffee"/>
-			</div>
-		</div>
-		<div class="flowers-topleft"></div>
-		<div class="flowers-topright"></div>
-		<div class="flowers-bottomright"></div>
-		<div class="flowers-bottomleft"></div>
-		<header>
-			<img src="/img/logo.svg" alt="Café Frida" class="logo"/>
-		</header>
-
-		<button class="btn-menu">
-			<span></span>
-		</button>
-		<div id="menu-overlay">
-			<nav class="text-center">
-				<ul class="list-unstyled">
-					<li><button class="btnCloseMenu"><span></span></button></li>
-					<li><a href="#la-formule" class="link-formule link-scroll">La formule</a></li>
-					<li><a href="#menu" class="link-menu link-scroll">Menu</a></li>
-					<li><a href="#idee" class="link-idee link-scroll">L'idée</a></li>
-                    <li><a href="#dep" class="link-idee link-scroll">Le Dep Frida</a></li>
-					<li><a href="#contact" class="link-contact link-scroll">Contact</a></li>
-					<li><a href="https://www.facebook.com/Lecafefrida" class="" target="_blank"><span class="facebook"></span></a></li>
-				</ul>
-			</nav>
-		</div>
-	<section id="la-formule">
-		<h2>La formule</h2>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4 col-xs-8 mobile-fullwidth">
-					<h1>Café <br>Frida <span>c’est...</span></h1>
-					<div class="text padding-left">
-						<h3>La crème du café, de la lumière à n’en plus finir et le Fleuve comme voisin de table. Bienvenue au Frida.</h3>
-						<p>Un menu 100% végétalien (le premier en Mauricie) pour l’environnement, l’éthique et la différence. Des produits locaux, de saison et cuisinés sur place.</p>
-						<p>Un café 3<sup>ième</sup> vague éco-responsable et plus qu’équitable au niveau humain. Une relation entre le grain cueilli et votre tasse qui passe par la proximité avec les producteurs de café au soucis d’une parfaite torréfaction de ces lots en provenance d’orgines uniques et d’une infusion faite avec précision par nos baristas.</p>
-						<p>Des produits artisanaux, rien d’usiné, de votre cocktail jusqu’à votre miche de pain.</p>
-					</div>
-					<img src="/img/toast-gif-480.gif" alt="Toast" class="hidden-md hidden-lg img-toast"/>
-				</div>
-			</div>
-		</div>
-		<div class="col-right hidden-xs hidden-sm">
-			<div class="bg-gif"></div>
-		</div>
-	</section>
-	<div style="background-image:url(/img/ambiance-8.jpg);" class="fullscreen hidden-sm hidden-xs background parallax bg-ambiance hidden-mobile spacer-img-1" data-img-width="2000" data-img-height="1000" data-diff="200"></div>
-	<section id="menu">
-		<div class="thumb brown big-photo hidden-sm hidden-xs"><img src="/img/food_04.jpg" alt=""/></div>
-		<div class="thumb green small-photo hidden-sm hidden-xs"><img src="/img/food_03.jpg" alt=""/></div>
-		<div class="wrapper-menu hidden-sm hidden-xs">
-			<div class="container">
-				<nav class="menu">
-					<ul class="list-unstyled">
-						<li><a href="#cafes" class="scrollto">Cafés</a></li>
-						<li><a href="#dejeuners" class="scrollto">Brunch</a></li>
-						<li><a href="#drink" class="scrollto">Bar</a></li>
-						<li><a href="#menu-soiree" class="scrollto">Menu</a></li>
-						<li><a href="#boite-lunch" class="scrollto">Boîtes à lunch</a></li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-		<div class="overflow-hidden">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<h2>Menu</h2>
-					</div>
-					<div class="col-md-4 col-xs-8 mobile-fullwidth">
-						<div class="text-menu">
-							<p>Notre menu 100% végétalien, vous propose un <i>best of</i> de la bonne bouffe. Sans prétention. Sauf peut-être celle de faire un sérieux coup de charme à vos papilles. </p>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-6">
-						<h3 id="cafes" class="accordion-mobile">Cafés <span></span></h3>
-						<div class="wrapper-item-menu wrapper-accordion">
-							<ul class="list-unstyled item-menu">
-								<li>
-									<p>
-										<strong>Filtre</strong>
-									</p>
-								</li>
-								<li>
-									<p>
-										<strong>Espresso</strong>
-										Court, Allongé, Americano
-									</p>
-								</li>
-								<li>
-									<p>
-										<strong>Macchiato</strong>
-									</p>
-								</li>
-								<li>
-									<p>
-										<strong>Cappuccino</strong>
-									</p>
-								</li>
-								<li>
-									<p>
-										<strong>Latte</strong>
-									</p>
-								</li>
-								<li>
-									<p>
-										<strong>Mocha</strong>
-									</p>
-								</li>
-								<li>
-									<p>
-										<strong>Pour Over</strong>
-									</p>
-								</li>
-								<li>
-									<p>
-										<strong>Cold Brew</strong>
-									</p>
-								</li>
-								<li>
-									<p>
-										<strong>Nitro Cold Brew</strong>
-									</p>
-								</li>
-							</ul>
-						</div>
-						<div class="visible-xs">
-							<h3 class="accordion-mobile">Brunch <span></span></h3>
-
-<div class="wrapper-item-menu wrapper-accordion">
-<!--<p>Disponible les weekends de 9h à 15h!</p><br> -->
-	<ul class="list-unstyled item-menu">
-		<li>
-			<p>
-				<strong>CASSEROLE BÉNÉ 19.50$</strong>
-				Patates grelot, sauce hollandaise crémeuse aux légumes, cajous et tournesol, kale, tomates cerise, huile d'herbes. Servi avec toasts.
-			</p>
-		</li>
-		<li>
-			<p>
-				<strong>SANDWICH LOX 19$</strong>
-				Bagel maison, carottes au nori, fauxmage à la crème maison, oignons rouges, câpres, laitue. <br>
-				Servi avec Tater Tots ou fruits ou salade verte.
-		</li>
-		<li>
-			<p>
-				<strong>SHAKSHUKA 18.50$</strong>
-				Mijoté de poivrons grillés et tomates épicées, mozzarella de cajous et tournesol, tofu mariné, herbes fraîches. Servi avec Focaccia maison au romarin 
-			</p>
-		</li>
-		<li>
-			<p>
-				<strong>PANCAKES CINNAMOM 18.50$</strong>
-				Coulis de fraises à la vanille, glaçage royal, graines de citrouille et de tournesol pralinées au vrai sirop d'érable. 
-			</p>
-		</li>
-		<li>
-			<p>
-				<strong>SANDIWCH DEJ 19$</strong>
-				Bagel maison, foeufs de tofu, saucisse BM, laitue, fauxmage, tomate et végannaise. <br>
-				Servi avec Tater Tots ou fruits ou salade verte
-			</p>
-		</li>
-		<li>
-			<p>
-				<strong>BURRITO 18$</strong>
-				Frijoles maison, maïs, tofu bacon, jalapeno, kale, fauxmage dans un tortilla. <br>
-				Servi avec Tater Tots ou fruits ou salade verte
-			</p>
-		</li>
-		<li>
-			<p>
-				<strong>PATATES GARNIES 9$</strong>
-				Tater tots, bacon de tofu, mayo épicée, fauxmage, oignons verts, pepperocini
-			</p>
-		</li>
-		<li>
-			<p>
-				<strong>SALADE DE FRUITS 9$</strong>
-				Pommes, poires, dates medjoul fraîches, raisins, sésame grillé, fleur d'oranger, menthe fraîche, tahini
-			</p>
-		</li>
-		<li>
-			<p>
-				<strong>BOL DE CHIA 12$</strong>
-				Chia, lait de coco, granola au quinoa, fruits, confiture, chocolat noir
-			</p>
-		</li>
-		<li>
-			<p>
-				<strong>TOAST NUTELLA 12$</strong>
-				Pain maison, nutella de tournesol maison, bananes
-			</p>
-		</li>
-		<li>
-			<p>
-				<strong>TOAST VÉGÉ PÂTÉ 12$</strong>
-				Pain maison, végé pâté maison, moutarde de Meaux, mesclun, marinades 
-			</p>
-		</li>
-		<li>
-			<p>
-				<strong>Bagel 9$</strong>
-				Bagel maison, confiture maison ou fauxmage de légumes maison <br>
-				PAIN SANS GLUTEN 2.50$ 
-			</p>
-		</li>
-		<li>
-			<p>
-				<strong>Mimosa 10$</strong>
-				Prosecco d'importation privé, jus orange et fraises pressé à froid
-			</p>
-		</li>
-		<li>
-			<p>
-				<strong>Jus Loop 5.50$</strong>
-			</p>
-		</li>
-	</ul>
-</div>
-						</div>
-						
-
-						<h3 id="menu-soiree" class="accordion-mobile">Menu<span></span></h3>
-
-						<div class="wrapper-item-menu wrapper-accordion">
-							<p>Disponible à partir de 11h, weekends à partir de 17h</p><br>
-							<ul class="list-unstyled item-menu">
-								<li>
-									<p>
-										<strong>SNACK 13$</strong>
-										Trempette d'haricots blancs et huile d'herbes, muhammara, focaccia maison au romarin, endives, raisin et marinades. 
-									</p>
-								</li>
-								<li>
-									<p>
-										<strong>PICKLES FRIT 10$</strong>
-										4 morceaux de cornichons panés, nappés de vrai sirop d'érable servis ave végannaise maison épicée.
-									</p>
-								</li>
-								<li>
-									<p>
-										<strong>SALADE DE FRUITS 9$</strong>
-										Pommes, poires, dates medjoul fraîches, raisins, sésame grillé, fleur d'oranger, menthe fraîche, tahini
-									</p>
-								</li>
-								<li>
-									<p>
-										<strong>BOL DE CHIA 12$</strong>
-										Chia, lait de coco, granola au quinoa, fruits, confiture, chocolat noir
-									</p>
-								</li>
-								<li>
-									<p>
-										<strong>TOAST NUTELLA 12$</strong>
-										Pain maison, nutella de tournesol maison, bananes
-									</p>
-								</li>
-								<li>
-									<p>
-										<strong>TOAST VÉGÉ PÂTÉ 12$</strong>
-										Pain maison, végé pâté maison, moutarde de Meaux, mesclun, marinades
-									</p>
-								</li>
-								<li>
-									<p>
-										<strong>BAGEL 9$</strong>
-										Bagel maison, confiture maison ou fauxmage de légumes maison
-									</p>
-								</li>
-								<li>
-									<p>
-										<strong>ASSIETTE VERDE 21$</strong>
-										Soy Curls, shishitos, courgettes grillées, roquette, trempette d’haricots blancs, concombres, couscous perlé au pesto de menthe, tahini, végannaise épicée et citron. 
-									</p>
-								</li>
-								<li>
-									<p>
-										<strong>SANDWICH AUBERGINE & CÉSAR 21$</strong>
-										Aubergine parmigiana, mozz de cajous & tournesol, végannaise au basilic, roquette. Servi avec une kale césar.
-									</p>
-								</li>
-								<li>
-									<p>
-										<strong>SALADE REPAS & TOFU 18$</strong>
-										Brochettes de tofu harissa, mesclun, chou, concombres au zaatar, abricots, vinaigrette à la mélasse de grenade, pita chips, graines de citrouille et tournesol, oignons rouges, olives. 
-									</p>
-								</li>
-								<li>
-									<p>
-										<strong>PAS-POULET 19$</strong>
-										Croquettes de seitan maison panées et enrobées de notre sauce buffalo maison servi avec tater tots, salade de chou maison et végannaise. 
-									</p>
-								</li>
-								<li>
-									<p>
-										<strong>PLAT DE LA SEMAINE PM</strong>
-										Informez-vous au comptoir pour connaître notre plat du jour!
-									</p>
-								</li>
-								<li>
-									<p>
-										<strong>SOUPE DU JOUR 5$</strong>
-										Informez-vous au comptoir pour connaître notre soupe du jour! 
-									</p>
-								</li>
-								
-							</ul>
-						</div>
-
-					</div>
-					<div class="col-sm-6">
-
-						<div class="hidden-xs" id="dejeuners">
-							<h3 class="accordion-mobile">Brunch <span></span></h3>
-
-<div class="wrapper-item-menu wrapper-accordion">
-<!--<p>Disponible les weekends de 9h à 15h!</p><br> -->
-	<ul class="list-unstyled item-menu">
-		<li>
-			<p>
-				<strong>CASSEROLE BÉNÉ 19.50$</strong>
-				Patates grelot, sauce hollandaise crémeuse aux légumes, cajous et tournesol, kale, tomates cerise, huile d'herbes. Servi avec toasts.
-			</p>
-		</li>
-		<li>
-			<p>
-				<strong>SANDWICH LOX 19$</strong>
-				Bagel maison, carottes au nori, fauxmage à la crème maison, oignons rouges, câpres, laitue. <br>
-				Servi avec Tater Tots ou fruits ou salade verte.
-		</li>
-		<li>
-			<p>
-				<strong>SHAKSHUKA 18.50$</strong>
-				Mijoté de poivrons grillés et tomates épicées, mozzarella de cajous et tournesol, tofu mariné, herbes fraîches. Servi avec Focaccia maison au romarin 
-			</p>
-		</li>
-		<li>
-			<p>
-				<strong>PANCAKES CINNAMOM 18.50$</strong>
-				Coulis de fraises à la vanille, glaçage royal, graines de citrouille et de tournesol pralinées au vrai sirop d'érable. 
-			</p>
-		</li>
-		<li>
-			<p>
-				<strong>SANDIWCH DEJ 19$</strong>
-				Bagel maison, foeufs de tofu, saucisse BM, laitue, fauxmage, tomate et végannaise. <br>
-				Servi avec Tater Tots ou fruits ou salade verte
-			</p>
-		</li>
-		<li>
-			<p>
-				<strong>BURRITO 18$</strong>
-				Frijoles maison, maïs, tofu bacon, jalapeno, kale, fauxmage dans un tortilla. <br>
-				Servi avec Tater Tots ou fruits ou salade verte
-			</p>
-		</li>
-		<li>
-			<p>
-				<strong>PATATES GARNIES 9$</strong>
-				Tater tots, bacon de tofu, mayo épicée, fauxmage, oignons verts, pepperocini
-			</p>
-		</li>
-		<li>
-			<p>
-				<strong>SALADE DE FRUITS 9$</strong>
-				Pommes, poires, dates medjoul fraîches, raisins, sésame grillé, fleur d'oranger, menthe fraîche, tahini
-			</p>
-		</li>
-		<li>
-			<p>
-				<strong>BOL DE CHIA 12$</strong>
-				Chia, lait de coco, granola au quinoa, fruits, confiture, chocolat noir
-			</p>
-		</li>
-		<li>
-			<p>
-				<strong>TOAST NUTELLA 12$</strong>
-				Pain maison, nutella de tournesol maison, bananes
-			</p>
-		</li>
-		<li>
-			<p>
-				<strong>TOAST VÉGÉ PÂTÉ 12$</strong>
-				Pain maison, végé pâté maison, moutarde de Meaux, mesclun, marinades 
-			</p>
-		</li>
-		<li>
-			<p>
-				<strong>Bagel 9$</strong>
-				Bagel maison, confiture maison ou fauxmage de légumes maison <br>
-				PAIN SANS GLUTEN 2.50$ 
-			</p>
-		</li>
-		<li>
-			<p>
-				<strong>Mimosa 10$</strong>
-				Prosecco d'importation privé, jus orange et fraises pressé à froid
-			</p>
-		</li>
-		<li>
-			<p>
-				<strong>Jus Loop 5.50$</strong>
-			</p>
-		</li>
-	</ul>
-</div>
-						</div>
-						<h3 id="drink" class="accordion-mobile">Bar<span></span></h3>
-						<div class="wrapper-item-menu wrapper-accordion">
-							<ul class="list-unstyled item-menu">
-								<li>
-									<p>
-										<strong>SÉLECTION VARIÉE DE BIÈRES DE MICROBRASSERIE</strong>
-										(Beau's, Vox Populi, Avant-Garde, Glutenberg, Jukebox, Espace Public, Oshlag et plus) *Voir disponibilité sur place.
-									</p>
-								</li>
-								<li>
-									<p>
-										<strong>Cocktails maisons</strong>
-									</p>
-								</li>
-								<li>
-									<p>
-										<strong>Vins d'importation privée</strong>
-									</p>
-								</li>
-							</ul>
-						</div>
-						<h3 id="boite-lunch" class="accordion-mobile">Boîtes à lunch<span></span></h3>
-						<div class="wrapper-item-menu wrapper-accordion">
-							<ul class="list-unstyled item-menu">
-								<li>
-									<p>
-										Disponibles les midis de semaine, prêtes-à-emporter. <br>
-										Inclus: sandwich, soupe OU salade, breuvage et dessert
-									</p>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<div style="background-image:url(/img/ambiance-9.jpg);" class="fullscreen hidden-sm hidden-xs background parallax bg-ambiance hidden-mobile spacer-img-2" data-img-width="2000" data-img-height="1000" data-diff="200">
-		<div class="thumb beige big-photo hidden-sm hidden-xs"><img src="/img/food_01.jpg" alt=""/></div>
-		<div class="thumb green small-photo hidden-sm hidden-xs"><img src="/img/img-verti-3.jpg" alt=""/></div>
-	</div>
-	<ul class="mobile-gallery list-unstyled hidden-md hidden-lg">
-		<li><img src="/img/img-mobile-7.jpg" alt="Café Frida"/></li>
-		<li><img src="/img/img-mobile-11.jpg" alt="Café Frida"/></li>
-		<li><img src="/img/img-mobile-14.jpg" alt="Café Frida"/></li>
-		<li><img src="/img/img-mobile-16.jpg" alt="Café Frida"/></li>
-		<li><img src="/img/img-mobile-12.jpg" alt="Café Frida"/></li>
-		<li><img src="/img/img-mobile-8.jpg" alt="Café Frida"/></li>
-	</ul>
-	<section id="idee">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<h2>L'idée</h2>
-				</div>
-				<div class="col-sm-6">
-					<article class="padding-left text">
-						<p>L’idée est née de la complicité entre Gab et Emmanuel. De leur passion commune pour l’art et la bouffe. Le beau et le bon. Ensemble, ils ont décidé de transformer le 15, rue des Forges et d’y transporter l’univers éclectique et organique de la grande Frida Khalo.</p>
-						<p>Le Café Frida se veut un lieu de rencontres et de découvertes, par les œuvres changeantes aux murs, la musique choisie avec soin, le menu conçu avec passion et les employés attentionnés.</p>
-						<p>Pour toutes heures de la journée, seul, entre amis ou en famille. Pour travailler, flâner ou dîner entre collègues. Le Café Frida est toujours prêt à vous accueillir.</p>
-						<br/><a href="https://www.facebook.com/Lecafefrida" target="_blank" class="btn"><div class="hover">Visitez notre page Facebook</div><span>Visitez notre page Facebook</span></a>
-											</article>
-				</div>
-			</div>
-			<div class="padding-left">
-				<div class="row">
-					<div class="col-lg-12">
-						<h3>Parce qu’on <br class="idee-br"/>aime vous jaser ça :</h3>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-3 col-xs-4 mobile-fullwidth team">
-						<h3>Gabrielle <br/>Cossette</h3>
-						<p>propriétaire, féministe <br/>& amie des animaux</p>
-						<a href="mailto:g.cossette@cafefrida.ca">g.cossette@cafefrida.ca</a>
-					</div>
-					<div class="col-sm-3 col-xs-4 mobile-fullwidth team last">
-						<h3>Emmanuel <br/>Salib</h3>
-						<p>propriétaire <br/>& caféïnomane</p>
-						<a href="mailto:e.salib@cafefrida.ca">e.salib@cafefrida.ca</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<div style="background-image:url(/img/ambiance-11.jpg);" class="fullscreen hidden-sm hidden-xs background parallax bg-ambiance hidden-mobile spacer-img-2" data-img-width="2000" data-img-height="1000" data-diff="200">
-		<div class="thumb beige big-photo hidden-sm hidden-xs -reverse"><img src="/img/food_07.jpg" alt=""/></div>
-		<div class="thumb green small-photo hidden-sm hidden-xs -reverse"><img src="/img/img-verti-4.jpg" alt=""/></div>
-	</div>
-	<ul class="mobile-gallery list-unstyled hidden-md hidden-lg">
-		<li><img src="/img/img-mobile-9.jpg" alt="Café Frida"/></li>
-		<li><img src="/img/img-mobile-10.jpg" alt="Café Frida"/></li>
-		<li><img src="/img/img-mobile-15.jpg" alt="Café Frida"/></li>
-		<li><img src="/img/img-mobile-17.jpg" alt="Café Frida"/></li>
-		<li><img src="/img/img-mobile-18.jpg" alt="Café Frida"/></li>
-		<li><img src="/img/img-mobile-13.jpg" alt="Café Frida"/></li>
-	</ul>
-	<section id="dep">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-6"></div>
-				<div class="col-sm-6">
-					<h2>Le Dep Frida</h2>
-				</div>
-				<div class="col-sm-6"></div>
-				<div class="col-sm-6">
-					<article class="padding-left text">
-						<p>Le Dep Frida a ouvert ses portes à l’hiver 2019. Lieu de prédilection pour faire des emplettes véganes et biologiques. On peut s’y procurer nos pains artisanaux faits de farines Québécoises, des plats prêt-à-emporter toujours faits maison avec soin et s’offre à vous également une grande variété de bières de microbrasseries.</p>
-						<p>Parfait endroit pour passer se chercher une de nos fameuses boîtes-à-lunch à tout heure de la journée. Il est également possible d’y manger sur place un repas léger composé de soupe, sandwiche, salade et pâtisserie maison.</p>
-						<p>Ouvert du lundi au vendredi de 10h à 18h et du samedi à dimanche de 10h à 17h. </p>
-						<br><a href="https://www.facebook.com/ledepfrida" target="_blank" class="btn"><div class="hover">Visitez le Dep Frida sur Facebook</div><span>Visitez le Dep Frida sur Facebook</span></a>
-					</article>
-				</div>
-			</div>
-		</div>
-	</section>
-
-		<footer id="contact">
-			<div class="container">
-				<div class="padding-left">
-					<div class="row">
-						<div class="col-lg-12">
-							<img src="/img/logo.svg" alt="Café Frida" class="logo-footer"/>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-3 col-xs-6 mobile-fullwidth">
-							<address>
-								15, rue des forges, <br/>Trois-Rivières <br/>G9A 4X6
-							</address>
-							<p>
-								<strong><a href="tel:8198411334" class="tel">819.841.1334</a></strong><br/>
-								<a href="mailto:info@cafefrida.ca">info@cafefrida.ca</a><br/>
-								<a href="https://www.facebook.com/Lecafefrida" class="facebook" target="_blank"></a>
-							</p>
-						</div>
-						<div class="col-sm-3 heures col-xs-6 mobile-fullwidth">
-							<h4>Heures d’ouverture</h4>
-							<p>
-								Lundi 9h à 16h<br>
-								Mardi 9h à 16h<br>
-								Mercredi 9h à 21h<br>
-								Jeudi 9h à 21h<br>
-								Vendredi 9h à 21h<br>
-								Samedi 9h à 21h<br>
-								Dimanche 9h à 16h
-							</p>	
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="thumb brown big-photo">
-				<div id="map"></div>
-			</div>
-			<div class="container">
-				<div class="padding-left">
-					<div class="row row-copy">
-						<div class="col-lg-12">
-							<div class="signature">
-								<svg version="1.1" id="peace" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-									 width="20px" height="20px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
-									<path d="M24.697,16.728c-0.456-0.628-1.16-1.032-1.932-1.109l-0.368-0.037l1.533-10.233c0.097-0.643-0.063-1.285-0.45-1.808
-										s-0.953-0.864-1.597-0.96c-0.644-0.097-1.285,0.063-1.808,0.45c-0.523,0.386-0.864,0.954-0.961,1.597l-1.441,9.623L16.139,2.128
-										c-0.169-1.332-1.39-2.278-2.721-2.109c-0.645,0.082-1.22,0.41-1.618,0.924c-0.398,0.514-0.573,1.152-0.491,1.797l1.043,8.235
-										c-0.402-0.244-0.866-0.366-1.346-0.349c-0.649,0.023-1.251,0.298-1.694,0.774c-0.443,0.476-0.674,1.096-0.651,1.746l0.003,0.097
-										c-0.428-0.317-0.961-0.498-1.534-0.477c-1.341,0.048-2.394,1.178-2.346,2.52l0.268,6.604c0.105,2.923,1.222,5.747,3.145,7.952
-										C8.288,29.947,8.416,30,8.543,30c0.107,0,0.215-0.037,0.302-0.113c0.191-0.166,0.211-0.457,0.044-0.647
-										c-1.785-2.048-2.822-4.671-2.919-7.386c0-0.003,0-0.006,0-0.008l-0.268-6.592c-0.03-0.835,0.625-1.539,1.46-1.569
-										c0.833-0.03,1.539,0.625,1.569,1.46l0.096,2.688c0.009,0.248,0.213,0.443,0.459,0.443c0.005,0,0.011,0,0.017,0
-										c0.253-0.01,0.452-0.223,0.442-0.476l-0.167-4.686c-0.014-0.405,0.129-0.791,0.406-1.087c0.275-0.296,0.65-0.467,1.055-0.482
-										c0.404-0.014,0.791,0.13,1.087,0.406c0.235,0.218,0.39,0.5,0.452,0.808l0.603,4.761c0.032,0.252,0.262,0.43,0.513,0.397
-										s0.43-0.262,0.398-0.513L12.22,2.625c-0.051-0.402,0.058-0.799,0.306-1.119s0.606-0.524,1.008-0.575
-										c0.829-0.105,1.589,0.484,1.694,1.313l1.708,13.48c0.046,0.365,0.347,0.633,0.715,0.638c0.366,0.007,0.674-0.257,0.729-0.621
-										l1.645-10.979c0.061-0.4,0.273-0.753,0.599-0.994s0.726-0.34,1.126-0.28s0.753,0.272,0.994,0.598c0.24,0.326,0.34,0.726,0.279,1.126
-										l-2.561,17.093c-0.037,0.252,0.136,0.485,0.387,0.523c0.023,0.003,0.046,0.004,0.068,0.004c0.224,0,0.42-0.163,0.453-0.391
-										l0.893-5.951l0.412,0.041c0.512,0.053,0.979,0.32,1.279,0.736c0.303,0.416,0.414,0.942,0.305,1.445l-1.113,5.107
-										c0,0.006-0.002,0.012-0.003,0.019c-0.396,2.268-1.896,4.165-4.012,5.073c-0.233,0.101-0.341,0.371-0.241,0.604
-										c0.075,0.174,0.244,0.278,0.423,0.278c0.061,0,0.122-0.013,0.181-0.038c2.398-1.03,4.1-3.18,4.553-5.75l1.109-5.098
-										C25.319,18.15,25.152,17.355,24.697,16.728z"/>
-								</svg>
-								<p>© 2021 café Frida<br/>
-									<a href="http://plcossette.com/" target="_blank" class="pl">par Pier-luc cossette</a>
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-		<div class="bar-ie8">
-			<div class="bar-upgrade">
-				<div class="container">
-					<p>Ce site c'est pas optimisé pour Internet Explorer 7 et 8. <a href="http://windows.microsoft.com/fr-ch/internet-explorer/download-ie" target="_blank">Une mise à jour est nécessaire, cliquez ici pour accéder aux plus récents navigateur</a></p>
-				</div>
-			</div>
-		</div>
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-		  ga('create', 'UA-68685372-1', 'auto');
-		  ga('send', 'pageview');
-
-		</script>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIyqWXEPv_zHe4n2NcXLeNChOUEpBEOB0&callback=initMap"> </script>
-		<script src="/js/affix.js"></script>
-		<script src="/js/alert.js"></script>
-		<script src="/js/button.js"></script>
-		<script src="/js/carousel.js"></script>
-		<script src="/js/collapse.js"></script>
-		<script src="/js/detect.js"></script>
-		<script src="/js/tab.js"></script>
-		<script src="/js/pace.min.js"></script>
-		<script src="/js/tooltip.js"></script>
-		<script src="/js/transition.js"></script>
-		<script src="/js/css_browser_selector.js"></script>
-		<script src="/js/maps.js"></script>
-		<script src="/js/script.js"></script>
-	</body>
+    <!-- <script src="/scripts/affix.js"></script> -->
+    <!-- <script src="/scripts/alert.js"></script> -->
+    <!-- <script src="/scripts/button.js"></script> -->
+    <!-- <script src="/scripts/carousel.js"></script> -->
+    <!-- <script src="/scripts/collapse.js"></script>
+    <script src="/scripts/detect.js"></script>
+    <script src="/scripts/tab.js"></script> -->
+    <script src="/scripts/pace.js"></script>
+    <!-- <script src="/scripts/tooltip.js"></script>
+    <script src="/scripts/transition.js"></script>
+    <script src="/scripts/css_browser_selector.js"></script>
+    <script src="/scripts/maps.js"></script>
+    <script src="/scripts/script.js"></script> -->
+  </body>
 </html>
